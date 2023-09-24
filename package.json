@@ -1,5 +1,5 @@
 {
-  "name": "nurseplanner-v1",
+  "name": "nurse-planner-v1",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,17 +9,23 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@types/node": "20.6.4",
-    "@types/react": "18.2.22",
+    "@clerk/nextjs": "^4.23.5",
+    "@prisma/client": "^5.3.1",
+    "@types/node": "20.6.1",
+    "@types/react": "18.2.21",
     "@types/react-dom": "18.2.7",
-    "autoprefixer": "10.4.16",
-    "eslint": "8.50.0",
-    "eslint-config-next": "13.5.2",
-    "next": "13.5.2",
-    "postcss": "8.4.30",
+    "autoprefixer": "10.4.15",
+    "eslint": "8.49.0",
+    "eslint-config-next": "13.4.19",
+    "framer-motion": "^10.16.4",
+    "next": "13.4.19",
+    "postcss": "8.4.29",
+    "prisma": "^5.3.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-hook-form": "^7.46.1",
     "tailwindcss": "3.3.3",
-    "typescript": "5.2.2"
+    "typescript": "5.2.2",
+    "zustand": "^4.4.1"
   }
 }

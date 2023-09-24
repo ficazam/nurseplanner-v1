@@ -1,0 +1,41 @@
+// schema.prisma
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url = env("DATABSE_PRISMA_URL") // uses connection pooling
+  directUrl = env("DATABSE_URL_NON_POOLING") // uses a direct connection
+}
+
+model User {
+  id            String       @default(cuid()) @id
+  name          String    @unique
+  email         String    @unique
+  createdAt     DateTime  @default(now()) @map(name: "created_at")
+  isVerified    Boolean
+  userType      String
+  surgeon       User? @relation("assistant",fields: [surgeonId], references: [id])
+  surgeonId     String? @unique
+  assistant     User? @relation("assistant")
+  surgeonPatients      Patient[] @relation("surgeon")
+  nursePatients        Patient[] @relation("nurse")
+  superadmin    Boolean
+}
+
+model Patient {
+  id        String     @default(cuid()) @id
+  patientName     String
+  surgery   String
+  surgeon   User?   @relation("surgeon", fields: [surgeonId], references: [id])
+  surgeonId String?
+  nurse User? @relation("nurse", fields: [nurseId], references: [id])
+  nurseId   String?
+  surgeryDate   String
+  firstVisitDate    String
+  address   String
+  phoneNumber   String
+  notes String?
+}

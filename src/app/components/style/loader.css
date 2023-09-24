@@ -1,0 +1,56 @@
+.animated-message-top {
+    opacity: 100%;
+    padding: 0.3rem 0.5rem;
+    overflow: visible;
+    height: auto;
+    overflow: auto;
+    animation: message-top 1s linear forwards infinite;
+  }
+  
+  @keyframes message-top {
+    0% {
+      transform: translateY(50px);
+      opacity: 0;
+      transform-origin: bottom;
+    }
+  
+    50% {
+      opacity: 100%;
+      transform: translateY(0);
+    }
+  
+    100% {
+      transform: translateY(50px);
+      opacity: 0;
+      transform-origin: bottom;
+    }
+  }
+  
+  .animated-message-bottom {
+    opacity: 100%;
+    padding: 0.3rem 0.5rem;
+    overflow: visible;
+    height: auto;
+    overflow: auto;
+    animation: message-bottom 1s linear forwards infinite;
+  }
+  
+  @keyframes message-bottom {
+    0% {
+      transform: translateY(50px);
+      opacity: 0;
+      transform-origin: bottom;
+    }
+  
+    50% {
+      opacity: 100%;
+      transform: translateY(0);
+    }
+  
+    100% {
+      transform: translateY(50px);
+      opacity: 0;
+      transform-origin: bottom;
+    }
+  }
+  
