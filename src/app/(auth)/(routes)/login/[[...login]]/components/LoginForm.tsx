@@ -34,8 +34,6 @@ const LoginForm = () => {
         password: data.password,
       });
 
-      console.log(result);
-
       if (result.status !== "complete") {
         return;
       }
