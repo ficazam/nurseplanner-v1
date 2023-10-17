@@ -46,7 +46,7 @@ const Dashboard = async () => {
                   }
                 </p>
                 <p>Direccion: {patient.address}</p>
-                <p>Numero de telefono: {patient.phoneNumber}</p>
+                <p>Número de telefono: {patient.phoneNumber}</p>
                 <p>Notas: {patient.notes}</p>
               </div>
             </Card>
