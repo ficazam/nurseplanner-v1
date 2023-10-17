@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description: "Planeamiento para Enfermería CIRPA",
   manifest: '/manifest.json',
   creator: 'Felipe Icaza',
-  icons: '/icons.json',
+  icons: {icon: '/icon.png', apple: '/icon.png'},
   themeColor: '#fff'
 };
 
