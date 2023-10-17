@@ -17,7 +17,7 @@ const Patients = async () => {
 
   return (
     <>
-      {patientsList.map((patient: Patient) => (
+      {patientsList.length > 0 ? patientsList.map((patient: Patient) => (
         <Card key={patient.id}>
           <Link href={`/patients/${patient.id}`}>
             <div className="flex flex-col items-start justify-center w-full gap-y-2">
@@ -34,7 +34,9 @@ const Patients = async () => {
             </div>
           </Link>
         </Card>
-      ))}
+      )) : (
+        <h1 className="text-lg">No hay pacientes para mostrar.</h1>
+      )}
     </>
   );
 };

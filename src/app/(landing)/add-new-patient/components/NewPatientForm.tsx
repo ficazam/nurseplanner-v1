@@ -81,7 +81,7 @@ const NewPatientForm = (props: INewPatientFormProps) => {
 
   return (
     <FormProvider {...newPatientForm}>
-      <form onSubmit={newPatientForm.handleSubmit(submitNewPatient)}>
+      <form onSubmit={newPatientForm.handleSubmit(submitNewPatient)} className="p-10">
         <h1>Nuevo Paciente: </h1>
         <div className="my-1">
           <div className="relative flex flex-col my-8 md:px-0">
@@ -347,7 +347,7 @@ const NewPatientForm = (props: INewPatientFormProps) => {
               </Button>
               <CancelButton
                 type="button"
-                onClick={() => router.push("/dashboard/patients")}
+                onClick={() => router.push("/patients")}
               >
                 Cancelar
               </CancelButton>
